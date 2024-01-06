@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="programa.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculadora de Dias</h1>
+
+    <label for="beginDate">Data de início:</label>
+    <input type="date" id="beginDate" required>
+
+    <label for="endDate">Data de término:</label>
+    <input type="date" id="endDate" required>
+
+    <button onclick="import('./programa.js').then(module => module.calculateDaysBetweenDate())">Calcular Diferença</button>
+
+    <p id="result"></p>
+</body>
+
+</html>
