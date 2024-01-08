@@ -27,10 +27,11 @@ function formatDate(date) {
 // document.addEventListener('DOMContentLoaded', () => {
 //     const button = document.getElementById('calculateButton');
 //     button.addEventListener('click', displayDaysBetweenDates);
-// });
+// }); TODO: remover essa parte
+
 if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {
         const button = document.getElementById('calculateButton');
         button.addEventListener('click', displayDaysBetweenDates);
     });
-}
+} //
