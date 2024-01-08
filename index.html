@@ -4,22 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="programa.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script type="module" src="main.js"></script>
+    <title>Quantos dias?</title>
 </head>
 
 <body>
-    <h1>Calculadora de Dias</h1>
+    <header>
+        <h1>Calculadora de Dias com testes</h1>
+    </header>
+    <main>
+        <section class="section">
+            <div class="section__inputs">
+                <label for="beginDate">Data de início: </label>
+                <input type="date" id="beginDate" required>
+            </div>
+            <div class="section__inputs">
+                <label for="endDate">Data de término: </label>
+                <input type="date" id="endDate" required>
+            </div>
 
-    <label for="beginDate">Data de início:</label>
-    <input type="date" id="beginDate" required>
+            <button id="calculateButton">Calcular Diferença</button>
 
-    <label for="endDate">Data de término:</label>
-    <input type="date" id="endDate" required>
+            <div class="section__result">
+                <p id="result">Informe as datas</p>
+            </div>
+        </section>
 
-    <button onclick="import('./programa.js').then(module => module.calculateDaysBetweenDate())">Calcular Diferença</button>
+    </main>
+    <footer>
+        <p>Desenvolvido por @digowow </p>
+        <a class="apresentacao__links__navegacao" target="_blank" rel="noopener"
+            href="https://github.com/DiegoFroehlichLeal">
+            <img src="./assets/LogoGithub.png" alt=""></a>
 
-    <p id="result"></p>
+        <a class="apresentacao__links__navegacao" target="_blank" rel="noopener"
+            href="https://www.linkedin.com/in/diegofleal/">
+            <img src="./assets/LogoLinkedin.png" alt=""></a>
+
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+
+    --cor-peach-fuzz: #FFBE98;
+    --cor-principal: #2C333E;
+    --cor-secundaria: #C54966;
+    --cor-terciaria: #CDB127;
+    --cor-quaternaria: #8398CA;
+    --cor-texto-light: #EEEEEE;
+    --cor-texto-dark: #393E46;
+    --cor-dijon: #97754C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-light);
+    min-height: 100vh;
+
+
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    color: var(--cor-texto-light);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 5px;
+
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section {
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    background-color: var(--cor-peach-fuzz);
+    color: var(--cor-texto-dark);
+    padding: 20px;
+    border-radius: 20px;
+    gap: 5%;
+}
+
+.section__inputs {
+    align-self: center;
+}
+
+input,
+label {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    align-self: center;
+    font-size: medium;
+
+
+}
+
+input:hover {
+    cursor: text;
+}
+
+#calculateButton {
+    background-color: var(--cor-dijon);
+    border: none;
+    height: 50px;
+    width: 175px;
+    color: var(--cor-texto-light);
+    padding: 15px 20px;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    align-self: center;
+}
+
+#calculateButton:hover {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: var(--cor-texto-light);
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 5px 5px 5px 5px;
+    gap: 10px;
+}
+
+@media (max-width: 450px) {
+    .section {
+        height: 50vh;
+        width: 190px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
