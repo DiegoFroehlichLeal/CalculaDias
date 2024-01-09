@@ -22,7 +22,7 @@ describe('calculateDaysBetweenDates', () => {
   });
 
   it('lida com strings de data inválidas e retorna NaN', () => {
-    const begin = 'qualquer merda';
+    const begin = 'qualquer coisa';
     const end = '2022-01-10';
 
     const result = calculateDaysBetweenDates(begin, end);
