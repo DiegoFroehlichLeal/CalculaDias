@@ -8,13 +8,13 @@ export function calculateDaysBetweenDates(begin, end) {
 export function displayDaysBetweenDates() {
     const begin = document.getElementById('beginDate').value;
     const end = document.getElementById('endDate').value;
-
-    const daysDifference = calculateDaysBetweenDates(begin, end) + 1;
-    const businessDays = getBusinessDays(begin, end);
-    const formattedBeginDate = formatDate(new Date(begin));
-    const formattedEndDate = formatDate(new Date(end));
-
-    document.getElementById('result').innerText = `São ${daysDifference} dias corridos e ${businessDays} úteis `;
+    if (begin > end) {
+        document.getElementById('result').innerText = `A data inicial não pode ser maior que a data final!`;
+    } else {
+        const daysDifference = calculateDaysBetweenDates(begin, end) + 1;
+        const businessDays = getBusinessDays(begin, end);
+        document.getElementById('result').innerText = `São ${daysDifference} dias corridos e ${businessDays} úteis `;
+    }
 }
 
 function formatDate(date) {
@@ -59,10 +59,10 @@ function getBusinessDays(begin, end) {
         }
         beginDate.setUTCDate(date + 1);
     }
-    console.log(businessDays);
     return businessDays;
 }
 
+//Calcula a sexta-feira santa de acordo com o ano.
 function getGoodFriday(year) {
     const a = year % 19;
     const b = Math.floor(year / 100);
